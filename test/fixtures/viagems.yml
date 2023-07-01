@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  local_partida: MyString
+  local_chegada: MyString
+  data_partida: 2023-07-01
+  data_chegada: 2023-07-01
+  horario_partida: 2023-07-01 15:46:00
+  horario_chegada: 2023-07-01 15:46:00
+  tipo: MyString
+  usuario: one
+
+two:
+  local_partida: MyString
+  local_chegada: MyString
+  data_partida: 2023-07-01
+  data_chegada: 2023-07-01
+  horario_partida: 2023-07-01 15:46:00
+  horario_chegada: 2023-07-01 15:46:00
+  tipo: MyString
+  usuario: two
