@@ -1,6 +1,13 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Trips</h1>
+<%= search_form_for @q do |f| %>
+<%= f.label :departure_location%>
+<%= f.text_field :departure_location_cont, class: 'form-control' %>
+<%= f.submit class: 'btn btn-primary' %>
+<%= link_to "Clear", request.path, class: "btn btn-default" %>
+<% end %>
+
 
 <div id="trips">
   <% @trips.each do |trip| %>

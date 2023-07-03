@@ -72,7 +72,10 @@ group :test do
 end
 
 # design
-gem 'bootstrap-sass', '~> 3.4.1'
+  gem 'bootstrap-sass', '~> 3.4.1'
 
 # search button
-gem 'ransack'
+  gem 'faker'
+  gem 'bootstrap', '~> 4.3.1'
+  gem 'ransack'
+  gem 'will_paginate-bootstrap4'

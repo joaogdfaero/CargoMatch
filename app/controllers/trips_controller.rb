@@ -3,8 +3,8 @@ class TripsController < ApplicationController
 
   # GET /trips or /trips.json
   def index
-    @trips = Trip.all
-    
+    @q = Trip.ransack(params[:q])
+    @trips = @q.result 
   end
 
   # GET /trips/1 or /trips/1.json
