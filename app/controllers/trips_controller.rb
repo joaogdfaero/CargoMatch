@@ -4,6 +4,7 @@ class TripsController < ApplicationController
   # GET /trips or /trips.json
   def index
     @trips = Trip.all
+    
   end
 
   # GET /trips/1 or /trips/1.json
@@ -65,6 +66,6 @@ class TripsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def trip_params
-      params.require(:trip).permit(:departure_location, :arrival_location, :departure_date, :arrival_date, :departure_time, :arrival_time, :type, :user_id)
+      params.require(:trip).permit(:departure_location, :arrival_location, :departure_date, :arrival_date, :departure_time, :arrival_time, :trip_type, :user_id)
     end
 end

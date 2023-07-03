@@ -20,7 +20,7 @@ class TripsTest < ApplicationSystemTestCase
     fill_in "Departure date", with: @trip.departure_date
     fill_in "Departure location", with: @trip.departure_location
     fill_in "Departure time", with: @trip.departure_time
-    fill_in "Type", with: @trip.type
+    fill_in "Trip type", with: @trip.trip_type
     fill_in "User", with: @trip.user_id
     click_on "Create Trip"
 
@@ -38,7 +38,7 @@ class TripsTest < ApplicationSystemTestCase
     fill_in "Departure date", with: @trip.departure_date
     fill_in "Departure location", with: @trip.departure_location
     fill_in "Departure time", with: @trip.departure_time
-    fill_in "Type", with: @trip.type
+    fill_in "Trip type", with: @trip.trip_type
     fill_in "User", with: @trip.user_id
     click_on "Update Trip"
 

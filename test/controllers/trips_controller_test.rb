@@ -17,7 +17,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create trip" do
     assert_difference("Trip.count") do
-      post trips_url, params: { trip: { arrival_date: @trip.arrival_date, arrival_location: @trip.arrival_location, arrival_time: @trip.arrival_time, departure_date: @trip.departure_date, departure_location: @trip.departure_location, departure_time: @trip.departure_time, type: @trip.type, user_id: @trip.user_id } }
+      post trips_url, params: { trip: { arrival_date: @trip.arrival_date, arrival_location: @trip.arrival_location, arrival_time: @trip.arrival_time, departure_date: @trip.departure_date, departure_location: @trip.departure_location, departure_time: @trip.departure_time, trip_type: @trip.trip_type, user_id: @trip.user_id } }
     end
 
     assert_redirected_to trip_url(Trip.last)
@@ -34,7 +34,7 @@ class TripsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update trip" do
-    patch trip_url(@trip), params: { trip: { arrival_date: @trip.arrival_date, arrival_location: @trip.arrival_location, arrival_time: @trip.arrival_time, departure_date: @trip.departure_date, departure_location: @trip.departure_location, departure_time: @trip.departure_time, type: @trip.type, user_id: @trip.user_id } }
+    patch trip_url(@trip), params: { trip: { arrival_date: @trip.arrival_date, arrival_location: @trip.arrival_location, arrival_time: @trip.arrival_time, departure_date: @trip.departure_date, departure_location: @trip.departure_location, departure_time: @trip.departure_time, trip_type: @trip.trip_type, user_id: @trip.user_id } }
     assert_redirected_to trip_url(@trip)
   end
 
