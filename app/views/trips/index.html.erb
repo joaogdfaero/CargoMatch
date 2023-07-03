@@ -1,21 +1,58 @@
+<style>
+  #trips {
+    table-layout: auto;
+    width: auto;
+  }
+
+  #trips th,
+  #trips td {
+    text-align: center;
+    padding: 5px;
+  }
+</style>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Trips</h1>
 <%= search_form_for @q do |f| %>
-<%= f.label :departure_location%>
-<%= f.text_field :departure_location_cont, class: 'form-control' %>
-<%= f.submit class: 'btn btn-primary' %>
-<%= link_to "Clear", request.path, class: "btn btn-default" %>
+  <%= f.label :departure_location %>
+  <%= f.text_field :departure_location_cont, class: 'form-control' %>
+  <%= f.submit class: 'btn btn-primary' %>
+  <%= link_to "Clear", request.path, class: "btn btn-default" %>
 <% end %>
 
-
-<div id="trips">
-  <% @trips.each do |trip| %>
-    <%= render trip %>
-    <p>
-      <%= link_to "Show this trip", trip %>
-    </p>
-  <% end %>
-</div>
+<table id="trips">
+  <thead>
+    <tr>
+      <th>Trip ID</th>
+      <th>Departure Location</th>
+      <th>Arrival Location</th>
+      <th>Departure Date</th>
+      <th>Arrival Date</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+      <th>Trip Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @trips.each do |trip| %>
+      <tr>
+        <td><%= trip.id %></td>
+        <td><%= trip.departure_location %></td>
+        <td><%= trip.arrival_location %></td>
+        <td><%= trip.departure_date %></td>
+        <td><%= trip.arrival_date %></td>
+        <td><%= trip.departure_time %></td>
+        <td><%= trip.arrival_time %></td>
+        <td><%= trip.trip_type %></td>
+        <td>
+          <%= link_to "Show", trip %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to "New trip", new_trip_path %>
+
