@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure_location: MyString
+  arrival_location: MyString
+  departure_date: 2023-07-01
+  arrival_date: 2023-07-01
+  departure_time: 2023-07-01 16:41:28
+  arrival_time: 2023-07-01 16:41:28
+  trip_type: 1
+  user: one
+
+two:
+  departure_location: MyString
+  arrival_location: MyString
+  departure_date: 2023-07-01
+  arrival_date: 2023-07-01
+  departure_time: 2023-07-01 16:41:28
+  arrival_time: 2023-07-01 16:41:28
+  trip_type: 1
+  user: two

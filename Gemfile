@@ -70,3 +70,12 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# design
+  gem 'bootstrap-sass', '~> 3.4.1'
+
+# search button
+  gem 'faker'
+  gem 'bootstrap', '~> 4.3.1'
+  gem 'ransack'
+  gem 'will_paginate-bootstrap4'
