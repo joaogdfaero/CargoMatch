@@ -1,25 +1,86 @@
 <style>
   #trips {
     table-layout: auto;
-    width: auto;
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
   }
 
   #trips th,
   #trips td {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  #trips th {
+    background-color: #f2f2f2;
+  }
+
+  #trips tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  #trips tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+
+  .search-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .search-container label,
+  .search-container input[type="text"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-container .actions {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .search-container .actions .btn {
+    margin-right: 10px;
+  }
+
+  h1 {
+    text-align: left;
+    margin-left: 76px;
   }
 </style>
+
 
 <p style="color: green"><%= notice %></p>
 
 <h1>Trips</h1>
-<%= search_form_for @q do |f| %>
-  <%= f.label :departure_location %>
-  <%= f.text_field :departure_location_cont, class: 'form-control' %>
-  <%= f.submit class: 'btn btn-primary' %>
-  <%= link_to "Clear", request.path, class: "btn btn-default" %>
-<% end %>
+
+<div class="search-container">
+  <%= search_form_for @q do |f| %> 
+    <%= f.label :departure_location %>
+    <%= f.text_field :departure_location_cont, class: 'form-control' %>
+
+    <%= f.label :arrival_location %>
+    <%= f.text_field :arrival_location_cont, class: 'form-control' %>
+
+    <%= f.label :departure_date %>
+    <%= f.text_field :departure_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+
+    <%= f.label :arrival_date %>
+    <%= f.text_field :arrival_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+
+    <%= f.label :trip_type %>
+    <%= f.text_field :trip_type_cont, class: 'form-control' %>
+
+    <div class="actions">
+    <%= f.submit class: 'btn btn-primary' %>
+    <%= link_to "Clear", request.path, class: "btn btn-default" %>
+    </div>
+  <% end %>
+</div>
 
 <table id="trips">
   <thead>
@@ -41,8 +102,8 @@
         <td><%= trip.id %></td>
         <td><%= trip.departure_location %></td>
         <td><%= trip.arrival_location %></td>
-        <td><%= trip.departure_date %></td>
-        <td><%= trip.arrival_date %></td>
+        <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
+        <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
         <td><%= trip.departure_time %></td>
         <td><%= trip.arrival_time %></td>
         <td><%= trip.trip_type %></td>
@@ -55,4 +116,6 @@
 </table>
 
 <%= link_to "New trip", new_trip_path %>
+
+
 
