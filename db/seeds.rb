@@ -1,6 +1,12 @@
-trip_types = [0, 1]
+trip_types = ['Solicitada', 'Oferecida']
 
 100.times do
+  user = User.create!(
+    name: Faker::Name.name,
+    cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true),
+    driver: [true, false].sample
+  )
+
   Trip.create!(
     departure_location: Faker::Address.city,
     arrival_location: Faker::Address.city,
@@ -9,6 +15,10 @@ trip_types = [0, 1]
     departure_time: Faker::Time.forward(days: 30, period: :evening),
     arrival_time: Faker::Time.forward(days: 60, period: :evening),
     trip_type: trip_types.sample,
-    user: User.first
+    user: user
   )
 end
+
+
+
+
