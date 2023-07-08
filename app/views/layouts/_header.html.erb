@@ -25,11 +25,15 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-
+        <% if user_signed_in? %>
           <li>
-            <%= link_to 'Entrar', "#" %>
+            <%= link_to 'Sair', destroy_user_session_path %>
           </li>
-
+        <% else %>
+          <li>
+            <%= link_to 'Entrar', new_user_registration_path %>
+          </li>
+        <% end %>
       </ul>
 
     </div>

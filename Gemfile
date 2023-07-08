@@ -81,4 +81,7 @@ end
   gem 'will_paginate-bootstrap4'
 
 # validations
-  gem 'cpf_cnpj' 
+  gem 'cpf_cnpj'
+
+# login
+  gem 'devise'
