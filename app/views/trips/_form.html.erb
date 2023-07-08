@@ -10,48 +10,49 @@
       </ul>
     </div>
   <% end %>
-
-  <div>
+<form>
+  <div class="form-group">
     <%= form.label :departure_location, style: "display: block" %>
-    <%= form.text_field :departure_location %>
+    <%= form.text_field :departure_location, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :arrival_location, style: "display: block" %>
-    <%= form.text_field :arrival_location %>
+    <%= form.text_field :arrival_location, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :departure_date, style: "display: block" %>
-    <%= form.date_field :departure_date %>
+    <%= form.date_field :departure_date, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :arrival_date, style: "display: block" %>
-    <%= form.date_field :arrival_date %>
+    <%= form.date_field :arrival_date, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :departure_time, style: "display: block" %>
-    <%= form.time_field :departure_time %>
+    <%= form.time_field :departure_time, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :arrival_time, style: "display: block" %>
-    <%= form.time_field :arrival_time %>
+    <%= form.time_field :arrival_time, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :trip_type, style: "display: block" %>
-    <%= form.number_field :trip_type %>
+    <%= form.number_field :trip_type, class: "form-control" %>
   </div>
 
-  <div>
+  <div class="form-group">
     <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.text_field :user_id, class: "form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
+</form>
 <% end %>
