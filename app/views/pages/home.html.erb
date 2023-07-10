@@ -9,6 +9,19 @@
     .home-content {
       background-color: #f8f9fa;
     }
+
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .button-container a {
+    margin: 0 5px; /* Adjust the margin value as needed */
+  }
+
+
 </style>
 
 
@@ -17,12 +30,17 @@
   <p>
     Encontre fretes mais baratos para a sua encomenda!
   </p>
-  <p>
-    <%= link_to 'Crie uma conta', 'users/new', class: 'btn btn-primary btn-lg' %>
-  <p>
-  <%= link_to 'Ver viagens oferecidas', 'trips', class: 'btn btn-primary btn-lg' %>
-  <p>
-  <%= link_to 'Solicite ou ofereça uma viagem', 'trips/new', class: 'btn btn-primary btn-lg' %>
-  </p>
+  <% if not user_signed_in? %>
+    <p>
+      <%= link_to 'Crie uma conta', '/users/sign_up', class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Ver viagens oferecidas', 'trips', class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Solicite ou ofereça uma viagem', 'trips/new', class: 'btn btn-primary btn-lg' %>
+    </p>
+  <% else %>
+    <div class="button-container">
+      <%= link_to 'Ver viagens oferecidas', 'trips', class: 'btn btn-primary btn-lg' %>
+      <%= link_to 'Solicite ou ofereça uma viagem!', 'trips/new', class: 'btn btn-primary btn-lg' %>
+    </div>
+  <% end %>
 </div>
 

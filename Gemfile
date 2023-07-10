@@ -74,8 +74,14 @@ end
 # design
   gem 'bootstrap-sass', '~> 3.4.1'
 
-# search button
+# design
   gem 'faker'
   gem 'bootstrap', '~> 4.3.1'
   gem 'ransack'
   gem 'will_paginate-bootstrap4'
+
+# validations
+  gem 'cpf_cnpj'
+
+# login
+  gem 'devise'

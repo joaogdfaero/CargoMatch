@@ -1,5 +1,9 @@
 class Trip < ApplicationRecord
-  validates  :trip_type, inclusion: { in: [0, 1], message: "must be either 0 or 1" }
+  validates  :trip_type, inclusion: { in: ['Solicitada', 'Oferecida'], message: "Deve ser uma viagem solicita ou oferecida" }
+  
+  validates :departure_location, :arrival_location, :departure_date, :arrival_date,
+            :departure_time, :arrival_time, :trip_type, presence: true
+
   belongs_to :user
 
   def self.ransackable_associations(auth_object = nil)

@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div>
+<form>
+  <div class="form-group">
     <%= form.label :name, style: "display: block" %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :cpf, class: "uppercase-label", style: "display: block" %>
+    <%= form.text_field :cpf, class: "form-control" %>
   </div>
 
   <div>
-    <%= form.label :cpf, style: "display: block" %>
-    <%= form.text_field :cpf %>
-  </div>
-
-  <div>
-    <%= form.label :driver, style: "display: block" %>
+    <%= form.label "Você é entregador?", style: "display: block" %>
     <%= form.check_box :driver %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
+</form>
 <% end %>
