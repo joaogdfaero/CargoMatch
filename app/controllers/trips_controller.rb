@@ -59,6 +59,15 @@ class TripsController < ApplicationController
     end
   end
 
+  def join
+    @trip = Trip.find(params[:id])
+    unless @trip.user.eql?(current_user) || @trip.participants.include?(current_user.name)
+      @trip.participants << current_user.name
+      @trip.save
+    end
+    redirect_to trips_path, notice: "You joined the trip successfully!"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip
