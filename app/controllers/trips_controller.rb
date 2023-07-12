@@ -1,5 +1,6 @@
 class TripsController < ApplicationController
   before_action :set_trip, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[ new create ]
 
   # GET /trips or /trips.json
   def index
@@ -13,7 +14,7 @@ class TripsController < ApplicationController
 
   # GET /trips/new
   def new
-    @trip = Trip.new
+    @trip = current_user.trips.build
   end
 
   # GET /trips/1/edit
@@ -22,7 +23,7 @@ class TripsController < ApplicationController
 
   # POST /trips or /trips.json
   def create
-    @trip = Trip.new(trip_params)
+    @trip = current_user.trips.build(trip_params)
 
     respond_to do |format|
       if @trip.save
