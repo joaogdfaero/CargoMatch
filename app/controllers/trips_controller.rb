@@ -61,13 +61,55 @@ class TripsController < ApplicationController
 
   def join
     @trip = Trip.find(params[:id])
-    unless @trip.user.eql?(current_user) || @trip.participants.include?(current_user.name)
-      @trip.participants << current_user.name
+  
+    if current_user == @trip.user
+      redirect_to trips_path, notice: "You cannot join your own trip."
+    elsif @trip.participants.include?(current_user.name)
+      redirect_to trips_path, notice: "You are already a participant of this trip."
+    elsif @trip.requested_participants.include?(current_user.name)
+      redirect_to trips_path, notice: "You have already requested to join this trip."
+    else
+      @trip.requested_participants << current_user.name
       @trip.save
+      redirect_to trips_path, notice: "You have requested to join this trip."
     end
-    redirect_to trips_path, notice: "You joined the trip successfully!"
   end
 
+  def manage_requests
+    @trip = Trip.find(params[:id])
+    @requested_participants = @trip.requested_participants
+  end
+
+  def accept_request
+    @trip = Trip.find(params[:id])
+    participant = params[:participant]
+  
+    if @trip.user == current_user && @trip.requested_participants.include?(participant)
+      @trip.participants << participant
+      @trip.requested_participants.delete(participant)
+      @trip.save
+  
+      redirect_to manage_requests_trip_path(@trip), notice: "#{participant} has been accepted as a participant."
+    else
+      redirect_to manage_requests_trip_path(@trip), alert: "Invalid request."
+    end
+  end
+  
+  def reject_request
+    @trip = Trip.find(params[:id])
+    participant = params[:participant]
+  
+    if @trip.user == current_user && @trip.requested_participants.include?(participant)
+      @trip.requested_participants.delete(participant)
+      @trip.save
+  
+      redirect_to manage_requests_trip_path(@trip), notice: "#{participant} has been rejected as a participant."
+    else
+      redirect_to manage_requests_trip_path(@trip), alert: "Invalid request."
+    end
+  end
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_trip

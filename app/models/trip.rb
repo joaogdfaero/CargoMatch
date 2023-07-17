@@ -6,7 +6,7 @@ class Trip < ApplicationRecord
 
   belongs_to :user
   serialize :participants, Array
-  validates :participants, presence: true
+  serialize :requested_participants, Array
 
   def self.ransackable_associations(auth_object = nil)
     ["user"]
