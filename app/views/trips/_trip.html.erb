@@ -39,9 +39,9 @@
     <%= trip.user.name %>
   </p>
 
-    <p>
+  <p>
     <strong>Participants:</strong>
-    <%= trip.participants %>
+    <%= trip.participants.join(', ') %>
   </p>
 
 </div>
