@@ -114,9 +114,13 @@
         <% end %>
         </td>
         <td>
-          <%= link_to "Show", trip, class: "btn btn-primary"%>
+          <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
           <% if current_user && !trip.user.eql?(current_user) %>
-          <%= link_to "Join", join_trip_path(trip), method: :post, class: "btn btn-primary" %>
+            <% if trip.trip_type == 'Oferecida'%>
+              <%= link_to "Solicitar frete", join_trip_path(trip), method: :post, class: "btn btn-primary"%>
+            <% else %>
+              <%= link_to "Oferecer frete", join_trip_path(trip), method: :post, class: "btn btn-primary" %>
+            <% end %>
           <% end %>
         </td>
       </tr>

@@ -40,8 +40,12 @@
   </p>
 
   <p>
-    <strong>Participants:</strong>
-    <%= trip.participants.join(', ') %>
-  </p>
-
+    <% if trip.trip_type == 'Oferecida'%>
+      <strong>Participants:</strong>
+      <%= trip.participants.join(', ') %>
+    <% else %>
+      <strong>Motoristas:</strong>
+      <%= trip.participants.join(', ') %>
+    <% end %>
+   </p>
 </div>
