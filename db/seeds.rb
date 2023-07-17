@@ -4,7 +4,9 @@ trip_types = ['Solicitada', 'Oferecida']
   user = User.create!(
     name: Faker::Name.name,
     cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true),
-    driver: [true, false].sample
+    driver: [true, false].sample,
+    email: Faker::Internet.email,
+    password: Faker::Internet.password(min_length: 6)
   )
 
   Trip.create!(

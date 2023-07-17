@@ -93,6 +93,7 @@
       <th>Departure Time</th>
       <th>Arrival Time</th>
       <th>Trip Type</th>
+      <th>Participants</th>
       <th>Actions</th>
     </tr>
   </thead>
@@ -108,7 +109,19 @@
         <td><%= trip.arrival_time %></td>
         <td><%= trip.trip_type %></td>
         <td>
-          <%= link_to "Show", trip %>
+        <% trip.participants.each do |participant| %>
+          <%= participant %><br>
+        <% end %>
+        </td>
+        <td>
+          <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
+          <% if current_user && !trip.user.eql?(current_user) %>
+            <% if trip.trip_type == 'Oferecida'%>
+              <%= link_to "Solicitar frete", join_trip_path(trip), method: :post, class: "btn btn-primary"%>
+            <% else %>
+              <%= link_to "Oferecer frete", join_trip_path(trip), method: :post, class: "btn btn-primary" %>
+            <% end %>
+          <% end %>
         </td>
       </tr>
     <% end %>
