@@ -9,6 +9,9 @@ Rails.application.routes.draw do
       get 'manage_requests'
     end
   end
+
+  get 'my_trips', to: 'trips#my_trips'
+  
   resources :users
   root to: 'pages#home'
   get 'sobre', to: 'static_pages#sobre'

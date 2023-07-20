@@ -120,8 +120,10 @@ class TripsController < ApplicationController
       redirect_to manage_requests_trip_path(@trip), alert: "Invalid request."
     end
   end
-  
-  
+
+  def my_trips
+    @my_trips = current_user.trips
+  end
   
   private
     # Use callbacks to share common setup or constraints between actions.

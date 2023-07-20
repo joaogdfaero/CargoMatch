@@ -1,0 +1,68 @@
+<style>
+  #my-trips {
+    width: 90%;
+    margin: auto;
+  }
+
+  #my-trips th,
+  #my-trips td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  #my-trips th {
+    background-color: #f2f2f2;
+  }
+
+  #my-trips tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  #my-trips tbody tr:hover {
+    background-color: #e0e0e0;
+  }
+
+</style>
+
+
+<h1>Minhas Viagens</h1>
+
+<table id="my-trips">
+  <thead>
+    <tr>
+      <th>Departure Location</th>
+      <th>Arrival Location</th>
+      <th>Departure Date</th>
+      <th>Arrival Date</th>
+      <th>Departure Time</th>
+      <th>Arrival Time</th>
+      <th>Trip Type</th>
+      <th>Participants</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @my_trips.each do |trip| %>
+      <tr>
+        <td><%= trip.departure_location %></td>
+        <td><%= trip.arrival_location %></td>
+        <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
+        <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
+        <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
+        <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
+        <td><%= trip.trip_type %></td>
+        <td>
+          <% trip.participants.each do |participant| %>
+            <%= participant %><br>
+          <% end %>
+        </td>
+        <td>
+          <%= link_to "Details", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
