@@ -22,47 +22,48 @@
   #my-trips tbody tr:hover {
     background-color: #e0e0e0;
   }
-
 </style>
-
 
 <h1>Minhas Viagens</h1>
 
-<table id="my-trips">
-  <thead>
-    <tr>
-      <th>Departure Location</th>
-      <th>Arrival Location</th>
-      <th>Departure Date</th>
-      <th>Arrival Date</th>
-      <th>Departure Time</th>
-      <th>Arrival Time</th>
-      <th>Trip Type</th>
-      <th>Participants</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @my_trips.each do |trip| %>
+<% if @my_trips.empty? %>
+  <p>Você ainda não criou nenhuma viagem, <%= link_to "clique aqui", new_trip_path %> para criar.</p>
+<% else %>
+  <table id="my-trips">
+    <thead>
       <tr>
-        <td><%= trip.departure_location %></td>
-        <td><%= trip.arrival_location %></td>
-        <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
-        <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
-        <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
-        <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
-        <td><%= trip.trip_type %></td>
-        <td>
-          <% trip.participants.each do |participant| %>
-            <%= participant %><br>
-          <% end %>
-        </td>
-        <td>
-          <%= link_to "Details", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
-        </td>
+        <th>Departure Location</th>
+        <th>Arrival Location</th>
+        <th>Departure Date</th>
+        <th>Arrival Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Trip Type</th>
+        <th>Participants</th>
+        <th>Actions</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
+    </thead>
+    <tbody>
+      <% @my_trips.each do |trip| %>
+        <tr>
+          <td><%= trip.departure_location %></td>
+          <td><%= trip.arrival_location %></td>
+          <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.trip_type %></td>
+          <td>
+            <% trip.participants.each do |participant| %>
+              <%= participant %><br>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
 
