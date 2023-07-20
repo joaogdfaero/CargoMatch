@@ -103,8 +103,8 @@
         <td><%= trip.arrival_location %></td>
         <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
         <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
-        <td><%= trip.departure_time %></td>
-        <td><%= trip.arrival_time %></td>
+        <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
+        <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
         <td><%= trip.trip_type %></td>
         <td>
         <% trip.participants.each do |participant| %>

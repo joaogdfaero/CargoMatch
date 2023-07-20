@@ -21,12 +21,12 @@
 
   <p>
     <strong>Departure time:</strong>
-    <%= trip.departure_time %>
+    <%= trip.departure_time.strftime('%H:%M:%S %Z') %>
   </p>
 
   <p>
     <strong>Arrival time:</strong>
-    <%= trip.arrival_time %>
+    <%= trip.arrival_time.strftime('%H:%M:%S %Z') %>
   </p>
 
   <p>
