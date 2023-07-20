@@ -40,6 +40,13 @@
   </p>
 
   <p>
+    <% if trip.requested_participants.any? %>
+        <strong>Solicitações:</strong>
+        <%= trip.requested_participants.join(', ') %> 
+    <% end %>
+  </p>
+
+  <p>
     <% if trip.trip_type == 'Oferecida'%>
       <strong>Participants:</strong>
       <%= trip.participants.join(', ') %>
@@ -47,5 +54,6 @@
       <strong>Motoristas:</strong>
       <%= trip.participants.join(', ') %>
     <% end %>
-   </p>
+  </p>
+   
 </div>

@@ -89,7 +89,13 @@ class TripsController < ApplicationController
       @trip.requested_participants.delete(participant)
       @trip.save
   
-      redirect_to manage_requests_trip_path(@trip), notice: "#{participant} has been accepted as a participant."
+      notice_message = "#{participant} has been accepted as a participant."
+  
+      if @trip.requested_participants.any?
+        redirect_to manage_requests_trip_path(@trip), notice: notice_message
+      else
+        redirect_to trip_path(@trip), notice: notice_message
+      end
     else
       redirect_to manage_requests_trip_path(@trip), alert: "Invalid request."
     end
@@ -103,11 +109,18 @@ class TripsController < ApplicationController
       @trip.requested_participants.delete(participant)
       @trip.save
   
-      redirect_to manage_requests_trip_path(@trip), notice: "#{participant} has been rejected as a participant."
+      notice_message = "#{participant} has been rejected as a participant."
+  
+      if @trip.requested_participants.any?
+        redirect_to manage_requests_trip_path(@trip), notice: notice_message
+      else
+        redirect_to trip_path(@trip), notice: notice_message
+      end
     else
       redirect_to manage_requests_trip_path(@trip), alert: "Invalid request."
     end
   end
+  
   
   
   private
