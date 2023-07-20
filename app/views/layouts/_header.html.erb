@@ -14,10 +14,11 @@
 
     <div class="collapse navbar-collapse" id="expanded-menu">
       <ul class="nav navbar-nav">
-          
-          <li class="active">
+          <% if user_signed_in? %>
+            <li class="active">
             <a href=/my_trips>Minhas Viagens</a>
-          </li>
+            </li>
+          <% end %>
 
           <li class="active">
             <a href=/sobre>Sobre</a>
@@ -25,7 +26,6 @@
           <li class="active">
             <a href=/contato>Contato</a>
           </li>
-
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
