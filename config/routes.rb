@@ -10,6 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
+  delete 'trips/:id', to: 'trips#destroy'
   get 'my_trips', to: 'trips#my_trips'
   
   resources :users
