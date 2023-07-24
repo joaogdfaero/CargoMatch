@@ -26,107 +26,110 @@
   }
 
   .search-container {
-    width: 90%;
+    width: 100%;
     margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-right: 10px;
   }
 
-  .search-container label,
-  .search-container input[type="text"] {
-    display: block;
+  .search-box {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .search-box label,
+  .search-box input[type="text"],
+  .search-box .actions {
     width: 100%;
     margin-bottom: 10px;
   }
 
-  .search-container .actions {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
+  /* Clear floating elements after the search box and the grid */
+  .clear {
+    clear: both;
   }
-
-  .search-container .actions .btn {
-    margin-right: 10px;
-  }
-
-  h1 {
-    text-align: left;
-    margin-left: 76px;
-  }
+  
 </style>
 
-
 <p style="color: green"><%= notice %></p>
-
 <h1>Trips</h1>
-
 <div class="search-container">
-  <%= search_form_for @q do |f| %> 
-    <%= f.label :departure_location %>
-    <%= f.text_field :departure_location_cont, class: 'form-control' %>
+  <div class="search-box">
+    <%= search_form_for @q do |f| %> 
+      <%= f.label :departure_location %>
+      <%= f.text_field :departure_location_cont, class: 'form-control' %>
 
-    <%= f.label :arrival_location %>
-    <%= f.text_field :arrival_location_cont, class: 'form-control' %>
+      <%= f.label :arrival_location %>
+      <%= f.text_field :arrival_location_cont, class: 'form-control' %>
 
-    <%= f.label :departure_date %>
-    <%= f.text_field :departure_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+      <%= f.label :departure_date %>
+      <%= f.text_field :departure_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
 
-    <%= f.label :arrival_date %>
-    <%= f.text_field :arrival_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+      <%= f.label :arrival_date %>
+      <%= f.text_field :arrival_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
 
-    <%= f.label :trip_type %>
-    <%= f.text_field :trip_type_cont, class: 'form-control' %>
+      <%= f.label :trip_type %>
+      <%= f.text_field :trip_type_cont, class: 'form-control' %>
 
-    <div class="actions">
-    <%= f.submit class: 'btn btn-primary' %>
-    <%= link_to "Clear", request.path, class: "btn btn-default" %>
-    </div>
-  <% end %>
-</div>
+      <div class="actions">
+        <%= f.submit class: 'btn btn-primary' %>
+        <%= link_to "Clear", request.path, class: "btn btn-default" %>
+      </div>
 
-<table id="trips">
-  <thead>
-    <tr>
-      <th>Departure Location</th>
-      <th>Arrival Location</th>
-      <th>Departure Date</th>
-      <th>Arrival Date</th>
-      <th>Departure Time</th>
-      <th>Arrival Time</th>
-      <th>Trip Type</th>
-      <th>Participants</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @trips.each do |trip| %>
-      <tr>
-        <td><%= trip.departure_location %></td>
-        <td><%= trip.arrival_location %></td>
-        <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
-        <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
-        <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
-        <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
-        <td><%= trip.trip_type %></td>
-        <td>
-        <% trip.participants.each do |participant| %>
-          <%= participant %><br>
-        <% end %>
-        </td>
-        <td>
-          <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
-          <% if current_user && !trip.user.eql?(current_user) %>
-            <% if trip.trip_type == 'Oferecida'%>
-              <%= link_to "Solicitar frete", join_trip_path(trip), method: :post, class: "btn btn-primary"%>
-            <% else %>
-              <%= link_to "Oferecer frete", join_trip_path(trip), method: :post, class: "btn btn-primary" %>
-            <% end %>
-          <% end %>
-        </td>
-      </tr>
+      <%= link_to "New trip", new_trip_path, class: 'btn btn-default btn-gray' %>
     <% end %>
-  </tbody>
-</table>
+  </div>
 
-<%= link_to "New trip", new_trip_path %>
-
+  <table id="trips">
+    <thead>
+      <tr>
+        <th>Departure Location</th>
+        <th>Arrival Location</th>
+        <th>Departure Date</th>
+        <th>Arrival Date</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
+        <th>Trip Type</th>
+        <th>Participants</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @trips.each do |trip| %>
+        <tr>
+          <td><%= trip.departure_location %></td>
+          <td><%= trip.arrival_location %></td>
+          <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.trip_type %></td>
+          <td>
+          <% trip.participants.each do |participant| %>
+            <%= participant %><br>
+          <% end %>
+          </td>
+          <td>
+            <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
+            <% if current_user && !trip.user.eql?(current_user) %>
+              <% if trip.trip_type == 'Oferecida'%>
+                <%= link_to "Solicitar frete", join_trip_path(trip), method: :post, class: "btn btn-primary"%>
+              <% else %>
+                <%= link_to "Oferecer frete", join_trip_path(trip), method: :post, class: "btn btn-primary" %>
+              <% end %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
 

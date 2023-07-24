@@ -8,9 +8,9 @@
 <div>
   <% if current_user && @trip.user.eql?(current_user) %>
     <% if @trip.requested_participants.any? %>
-      <%= link_to "Manage Requests |", manage_requests_trip_path(@trip)%> 
-    <% end %>|
+      <%= link_to "Manage Requests", manage_requests_trip_path(@trip), class: "btn btn-default"%> 
+    <% end %>
   <% end %>
-  <%= link_to "Show this trip", @trip %> |
-  <%= link_to "Back to trips", trips_path %>
+  <%= link_to "Show this trip", @trip, class: "btn btn-default" %> 
+  <%= link_to "Back to trips", trips_path, class: 'btn btn-default' %>
 </div>

@@ -1,15 +1,15 @@
-<h1>Gerencia suas solicitações:</h1>
-
-<p>Solicitações:</p>
-<div>
-  <ul>
-    <% @requested_participants.each do |participant| %>
-      <li>
-        <%= participant %>
-        <%= button_to "Accept", accept_request_trip_path(@trip, participant: participant), method: :patch, class: "btn btn-success", style: "float: left; margin-right: 5px;" %>
-        <%= button_to "Reject", reject_request_trip_path(@trip, participant: participant), method: :delete, class: "btn btn-danger", style: "float: left; margin-right: 5px;" %>
-        <div style="clear: both;"></div>
-      </li>
-    <% end %>
-  </ul>
+<div class="panel">
+  <h1>Gerencia suas solicitações:</h1>
+  <div>
+    <ul>
+      <% @requested_participants.each do |participant| %>
+        <li>
+          <%= participant %>
+          <%= button_to "Accept", accept_request_trip_path(@trip, participant: participant), method: :patch, class: "btn btn-success", style: "float: left; margin-right: 5px;" %>
+          <%= button_to "Reject", reject_request_trip_path(@trip, participant: participant), method: :delete, class: "btn btn-danger", style: "float: left; margin-right: 5px;" %>
+          <div style="clear: both;"></div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>
