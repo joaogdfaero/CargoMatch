@@ -1,5 +1,13 @@
+<style>
+  .navbar {
+   /*  background-color: #f5f5f5;*/
+    border: none; 
+    border-radius: 0; 
+  }
 
-<nav class="navbar navbar-inverse navbar-static-top">
+</style>
+
+<nav class="navbar navbar-inverse navbar-static-to">
 
   <div class="container-fluid">
     <div class="navbar-header">
@@ -15,15 +23,15 @@
     <div class="collapse navbar-collapse" id="expanded-menu">
       <ul class="nav navbar-nav">
           <% if user_signed_in? %>
-            <li class="active">
+            <li class="inactive">
             <a href=/my_trips>Minhas Viagens</a>
             </li>
           <% end %>
 
-          <li class="active">
+          <li class="inactive">
             <a href=/sobre>Sobre</a>
           </li>
-          <li class="active">
+          <li class="inactive">
             <a href=/contato>Contato</a>
           </li>
       </ul>

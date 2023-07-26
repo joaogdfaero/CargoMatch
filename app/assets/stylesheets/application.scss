@@ -10,7 +10,6 @@ footer {
   color: $gray-light;
   a {
     color: $gray;
-    /*It means: that a:hover */
     &:hover{
       color: $gray-darker;
     }
@@ -38,7 +37,7 @@ footer {
 }
 
 .smaller-input {
-  width: 150px; /* Adjust the width as needed */
+  width: 150px; 
 }
 
 .panel {
@@ -46,5 +45,9 @@ footer {
   border-radius: 10px;
   padding: 15px;
   margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px; 
 }
 
