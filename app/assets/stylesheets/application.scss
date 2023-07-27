@@ -10,7 +10,6 @@ footer {
   color: $gray-light;
   a {
     color: $gray;
-    /*It means: that a:hover */
     &:hover{
       color: $gray-darker;
     }
@@ -30,4 +29,30 @@ footer {
 
 .uppercase-label {
   text-transform: uppercase;
+}
+
+.btn-gray {
+  background-color: gray;
+  color: white;
+}
+
+.smaller-input {
+  width: 150px; 
+}
+
+.panel {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 28px; 
+}
+
+.body {
+  background-image: url('/assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

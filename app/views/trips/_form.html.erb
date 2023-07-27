@@ -1,3 +1,5 @@
+<% content_for :body_class, 'body' %>
+
 <%= form_with(model: trip) do |form| %>
   <% if trip.errors.any? %>
     <div style="color: red">
@@ -10,7 +12,7 @@
       </ul>
     </div>
   <% end %>
-<form>
+
   <div class="form-group">
     <%= form.label :departure_location, style: "display: block" %>
     <%= form.text_field :departure_location, class: "form-control" %>
@@ -23,31 +25,31 @@
 
   <div class="form-group">
     <%= form.label :departure_date, style: "display: block" %>
-    <%= form.date_field :departure_date, class: "form-control" %>
+    <%= form.date_field :departure_date, class: "form-control smaller-input" %>
   </div>
 
   <div class="form-group">
     <%= form.label :arrival_date, style: "display: block" %>
-    <%= form.date_field :arrival_date, class: "form-control" %>
+    <%= form.date_field :arrival_date, class: "form-control smaller-input" %>
   </div>
 
   <div class="form-group">
     <%= form.label :departure_time, style: "display: block" %>
-    <%= form.time_field :departure_time, class: "form-control" %>
+    <%= form.time_field :departure_time, class: "form-control smaller-input"  %>
   </div>
 
   <div class="form-group">
     <%= form.label :arrival_time, style: "display: block" %>
-    <%= form.time_field :arrival_time, class: "form-control" %>
+    <%= form.time_field :arrival_time, class: "form-control smaller-input"  %>
   </div>
 
   <div class="form-group">
     <%= form.label "Sua viagem é solicitada ou oferecida?", style: "display: block" %>
-    <%= form.select :trip_type, [['Solicitada', 'Solicitada'], ['Oferecida', 'Oferecida']], { include_blank: false }, class: "form-control" %>
+    <%= form.select :trip_type, [['Solicitada', 'Solicitada'], ['Oferecida', 'Oferecida']], { include_blank: false }, class: "form-control smaller-input"  %>
   </div>
 
   <div class="form-group">
     <%= form.submit "Submit", class: "btn btn-primary" %>
   </div>
-</form>
 <% end %>
+

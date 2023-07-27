@@ -1,59 +1,80 @@
-<div id="<%= dom_id trip %>">
+<style>
+  #<%= dom_id(trip) %> {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+</style>
+<% content_for :body_class, 'body' %>
+
+<div id="<%= dom_id(trip) %>">
   <p>
-    <strong>Departure location:</strong>
+    <strong>Local de Partida:</strong>
     <%= trip.departure_location %>
   </p>
 
   <p>
-    <strong>Arrival location:</strong>
+    <strong>Local de Chegada:</strong>
     <%= trip.arrival_location %>
   </p>
 
   <p>
-    <strong>Departure date:</strong>
+    <strong>Data de Partida:</strong>
     <%= trip.departure_date %>
   </p>
 
   <p>
-    <strong>Arrival date:</strong>
+    <strong>Data de Chegada:</strong>
     <%= trip.arrival_date %>
   </p>
 
   <p>
-    <strong>Departure time:</strong>
+    <strong>Hora de Partida:</strong>
     <%= trip.departure_time.strftime('%H:%M:%S %Z') %>
   </p>
 
   <p>
-    <strong>Arrival time:</strong>
+    <strong>Hora de Chegada:</strong>
     <%= trip.arrival_time.strftime('%H:%M:%S %Z') %>
   </p>
 
   <p>
-    <strong>Trip type:</strong>
+    <strong>Tipo de Viagem:</strong>
     <%= trip.trip_type %>
   </p>
 
   <p>
-    <strong>User:</strong>
+    <strong>Usuário:</strong>
     <%= trip.user.name %>
   </p>
 
-  <p>
-    <% if trip.requested_participants.any? %>
-        <strong>Solicitações:</strong>
-        <%= trip.requested_participants.join(', ') %> 
-    <% end %>
-  </p>
+  <% if trip.requested_participants.any? %>
+    <p>
+      <strong>Solicitações:</strong>
+      <%= trip.requested_participants.join(', ') %> 
+    </p>
+  <% end %>
 
-  <p>
-    <% if trip.trip_type == 'Oferecida'%>
-      <strong>Participants:</strong>
+  <% if trip.trip_type == 'Oferecida' %>
+    <p>
+      <strong>Participantes:</strong>
       <%= trip.participants.join(', ') %>
-    <% else %>
+    </p>
+  <% else %>
+    <p>
       <strong>Motoristas:</strong>
       <%= trip.participants.join(', ') %>
-    <% end %>
-  </p>
-   
+    </p>
+  <% end %>
 </div>
+
