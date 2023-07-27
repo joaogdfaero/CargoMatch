@@ -17,12 +17,13 @@
     background-color: #f2f2f2;
   }
 
-  #trips tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
+
+  #trips tbody tr:nth-child(odd) {
+    background-color: #e0e0e0;
   }
 
-  #trips tbody tr:hover {
-    background-color: #e0e0e0;
+  #trips tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
   }
 
   .search-container {
@@ -55,8 +56,11 @@
   .clear {
     clear: both;
   }
-  
+
+
 </style>
+
+<% content_for :body_class, 'body' %>
 
 <p style="color: green"><%= notice %></p>
 <h1>Trips</h1>
@@ -87,6 +91,7 @@
     <% end %>
   </div>
 
+<body>
   <table id="trips">
     <thead>
       <tr>
@@ -130,6 +135,7 @@
       <% end %>
     </tbody>
   </table>
+</body> 
 </div>
 
 

@@ -1,3 +1,5 @@
+<% content_for :body_class, 'body' %>
+
 <%= form_with(model: trip) do |form| %>
   <% if trip.errors.any? %>
     <div style="color: red">
