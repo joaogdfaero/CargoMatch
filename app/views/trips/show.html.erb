@@ -5,16 +5,16 @@
 <div>
   <% if current_user && @trip.user.eql?(current_user) %>
     <% if @trip.requested_participants.any? %>
-      <%= link_to "Manage Requests", manage_requests_trip_path(@trip), class: 'btn btn-default'%> 
+      <%= link_to "Gerenciar solicitações", manage_requests_trip_path(@trip), class: 'btn btn-default'%> 
     <% end %>
 
-    <%= link_to "Edit this trip", edit_trip_path(@trip), class: 'btn btn-default'%> 
-    <%= link_to "Back to trips", trips_path, class: 'btn btn-default'%> 
+    <%= link_to "Editar frete", edit_trip_path(@trip), class: 'btn btn-default'%> 
+    <%= link_to "Voltar", trips_path, class: 'btn btn-default'%> 
     <%= form_with(model: @trip, url: trip_path(@trip), method: :delete, data: { confirm: "Are you sure you want to delete this trip?" }) do |form| %>
-      <%= form.submit "Destroy this trip", class: 'btn btn-default btn-gray', style: 'margin-top: 10px;'%>
+      <%= form.submit "Excluir frete", class: 'btn btn-default btn-gray', style: 'margin-top: 10px;'%>
     <% end %>
   <% else %>
-     <%= link_to "Back to trips", trips_path, class: 'btn btn-default'%> 
+     <%= link_to "Voltar", trips_path, class: 'btn btn-default'%> 
   <% end %>
 </div>
 

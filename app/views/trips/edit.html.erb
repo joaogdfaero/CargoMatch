@@ -1,4 +1,4 @@
-<h1>Editing trip</h1>
+<h1>Editar Frete</h1>
 
 <%= render "form", trip: @trip %>
 
@@ -11,6 +11,6 @@
       <%= link_to "Manage Requests", manage_requests_trip_path(@trip), class: "btn btn-default"%> 
     <% end %>
   <% end %>
-  <%= link_to "Show this trip", @trip, class: "btn btn-default" %> 
-  <%= link_to "Back to trips", trips_path, class: 'btn btn-default' %>
+  <%= link_to "Ver frete", @trip, class: "btn btn-default" %> 
+  <%= link_to "Voltar", trips_path, class: 'btn btn-default' %>
 </div>
