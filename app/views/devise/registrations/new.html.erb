@@ -1,6 +1,6 @@
 <% content_for :body_class, 'body' %>
 
-<h2>Sign up</h2>
+<h2>Cadastro</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
@@ -11,7 +11,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %>
+    <%= f.label :password, "Senha" %>
     <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -19,30 +19,27 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "Confirme a senha" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
-  <!-- Include the name field from the current form -->
   <div class="field">
-    <%= f.label :name, style: "display: block" %>
+    <%= f.label :name, "Nome", style: "display: block" %>
     <%= f.text_field :name, class: "form-control" %>
   </div>
 
-  <!-- Include the cpf field from the current form -->
   <div class="field">
     <%= f.label :cpf, class: "uppercase-label", style: "display: block" %>
     <%= f.text_field :cpf, class: "form-control" %>
   </div>
 
-  <!-- Include the driver field from the current form -->
   <div>
     <%= f.label "Você é entregador?", style: "display: block" %>
     <%= f.check_box :driver %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Cadastre-se" %>
   </div>
 <% end %>
 

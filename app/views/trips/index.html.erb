@@ -63,31 +63,30 @@
 <% content_for :body_class, 'body' %>
 
 <p style="color: green"><%= notice %></p>
-<h1>Trips</h1>
+<h1>Fretes</h1>
 <div class="search-container">
   <div class="search-box">
     <%= search_form_for @q do |f| %> 
-      <%= f.label :departure_location %>
+      <%= f.label :departure_location, "Local de Partida:" %>
       <%= f.text_field :departure_location_cont, class: 'form-control' %>
 
-      <%= f.label :arrival_location %>
+      <%= f.label :arrival_location, "Local de Chegada:" %>
       <%= f.text_field :arrival_location_cont, class: 'form-control' %>
 
-      <%= f.label :departure_date %>
-      <%= f.text_field :departure_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+      <%= f.label :departure_date, "Data de Partida:" %>
+      <%= f.text_field :departure_date_cont, class: 'form-control', placeholder: 'dd/mm/aaaa' %>
 
-      <%= f.label :arrival_date %>
-      <%= f.text_field :arrival_date_cont, class: 'form-control', placeholder: 'dd/mm/yyyy' %>
+      <%= f.label :arrival_date, "Data de Chegada:" %>
+      <%= f.text_field :arrival_date_cont, class: 'form-control', placeholder: 'dd/mm/aaaa' %>
 
-      <%= f.label :trip_type %>
+      <%= f.label :trip_type, "Tipo de Viagem:" %>
       <%= f.text_field :trip_type_cont, class: 'form-control' %>
-
       <div class="actions">
-        <%= f.submit class: 'btn btn-primary' %>
-        <%= link_to "Clear", request.path, class: "btn btn-default" %>
+        <%= f.submit "Buscar", class: 'btn btn-primary' %>
+        <%= link_to "Limpar", request.path, class: "btn btn-default" %>
       </div>
 
-      <%= link_to "New trip", new_trip_path, class: 'btn btn-default btn-gray' %>
+      <%= link_to "Novo frete", new_trip_path, class: 'btn btn-default btn-gray' %>
     <% end %>
   </div>
 
@@ -95,15 +94,15 @@
   <table id="trips">
     <thead>
       <tr>
-        <th>Departure Location</th>
-        <th>Arrival Location</th>
-        <th>Departure Date</th>
-        <th>Arrival Date</th>
-        <th>Departure Time</th>
-        <th>Arrival Time</th>
-        <th>Trip Type</th>
-        <th>Participants</th>
-        <th>Actions</th>
+        <th>Local de Partida</th>
+        <th>Local de Chegada</th>
+        <th>Data de Partida</th>
+        <th>Data de Chegada</th>
+        <th>Hora de Partida</th>
+        <th>Hora de Chegada</th>
+        <th>Tipo de Viagem</th>
+        <th>Participantes</th>
+        <th>Ações</th>
       </tr>
     </thead>
     <tbody>

@@ -43,13 +43,13 @@
       <% if not user_signed_in? %>
         <p>
           <%= link_to 'Crie uma conta', '/users/sign_up', class: 'btn btn-primary btn-lg' %>
-          <%= link_to 'Ver viagens oferecidas', 'trips', class: 'btn btn-primary btn-lg' %>
-          <%= link_to 'Solicite ou ofereça uma viagem', 'trips/new', class: 'btn btn-primary btn-lg' %>
+          <%= link_to 'Ver fretes disponíveis', 'trips', class: 'btn btn-primary btn-lg' %>
+          <%= link_to 'Solicite ou ofereça um frete', 'trips/new', class: 'btn btn-primary btn-lg' %>
         </p>
       <% else %>
         <div class="button-container">
-          <%= link_to 'Ver viagens oferecidas', 'trips', class: 'btn btn-primary btn-lg' %>
-          <%= link_to 'Solicite ou ofereça uma viagem!', 'trips/new', class: 'btn btn-primary btn-lg' %>
+          <%= link_to 'Ver fretes disponíveis', 'trips', class: 'btn btn-primary btn-lg' %>
+          <%= link_to 'Solicite ou ofereça um frete!', 'trips/new', class: 'btn btn-primary btn-lg' %>
         </div>
       <% end %>
     </div>
