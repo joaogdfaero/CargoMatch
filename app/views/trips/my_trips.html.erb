@@ -1,0 +1,71 @@
+<style>
+  #my-trips {
+    width: 90%;
+    margin: auto;
+  }
+
+  #my-trips th,
+  #my-trips td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  #my-trips th {
+    background-color: #f2f2f2;
+  }
+
+
+  #my-trips tbody tr:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
+
+  #my-trips tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+</style>
+<% content_for :body_class, 'body' %>
+
+<h1>Minhas Viagens</h1>
+
+<% if @my_trips.empty? %>
+  <p>Você ainda não criou nenhuma viagem, <%= link_to "clique aqui", new_trip_path %> para criar.</p>
+<% else %>
+  <table id="my-trips">
+    <thead>
+      <tr>
+        <th>Local de Partida</th>
+        <th>Local de Chegada</th>
+        <th>Data de Partida</th>
+        <th>Data de Chegada</th>
+        <th>Hora de Partida</th>
+        <th>Hora de Chegada</th>
+        <th>Tipo de Viagem</th>
+        <th>Participantes</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @my_trips.each do |trip| %>
+        <tr>
+          <td><%= trip.departure_location %></td>
+          <td><%= trip.arrival_location %></td>
+          <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.trip_type %></td>
+          <td>
+            <% trip.participants.each do |participant| %>
+              <%= participant %><br>
+            <% end %>
+          </td>
+          <td>
+            <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% end %>
+

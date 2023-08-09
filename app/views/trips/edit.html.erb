@@ -1,0 +1,16 @@
+<h1>Editar Frete</h1>
+
+<%= render "form", trip: @trip %>
+
+<br>
+
+
+<div>
+  <% if current_user && @trip.user.eql?(current_user) %>
+    <% if @trip.requested_participants.any? %>
+      <%= link_to "Manage Requests", manage_requests_trip_path(@trip), class: "btn btn-default"%> 
+    <% end %>
+  <% end %>
+  <%= link_to "Ver frete", @trip, class: "btn btn-default" %> 
+  <%= link_to "Voltar", trips_path, class: 'btn btn-default' %>
+</div>

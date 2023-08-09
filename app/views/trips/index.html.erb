@@ -1,0 +1,140 @@
+<style>
+  #trips {
+    table-layout: auto;
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+  }
+
+  #trips th,
+  #trips td {
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+
+  #trips th {
+    background-color: #f2f2f2;
+  }
+
+
+  #trips tbody tr:nth-child(odd) {
+    background-color: #e0e0e0;
+  }
+
+  #trips tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-right: 10px;
+  }
+
+  .search-box {
+    width: 100%;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+
+  .search-box label,
+  .search-box input[type="text"],
+  .search-box .actions {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Clear floating elements after the search box and the grid */
+  .clear {
+    clear: both;
+  }
+
+
+</style>
+
+<% content_for :body_class, 'body' %>
+
+<p style="color: green"><%= notice %></p>
+<h1>Fretes</h1>
+<div class="search-container">
+  <div class="search-box">
+    <%= search_form_for @q do |f| %> 
+      <%= f.label :departure_location, "Local de Partida:" %>
+      <%= f.text_field :departure_location_cont, class: 'form-control' %>
+
+      <%= f.label :arrival_location, "Local de Chegada:" %>
+      <%= f.text_field :arrival_location_cont, class: 'form-control' %>
+
+      <%= f.label :departure_date, "Data de Partida:" %>
+      <%= f.text_field :departure_date_cont, class: 'form-control', placeholder: 'dd/mm/aaaa' %>
+
+      <%= f.label :arrival_date, "Data de Chegada:" %>
+      <%= f.text_field :arrival_date_cont, class: 'form-control', placeholder: 'dd/mm/aaaa' %>
+
+      <%= f.label :trip_type, "Tipo de Viagem:" %>
+      <%= f.text_field :trip_type_cont, class: 'form-control' %>
+      <div class="actions">
+        <%= f.submit "Buscar", class: 'btn btn-primary' %>
+        <%= link_to "Limpar", request.path, class: "btn btn-default" %>
+      </div>
+
+      <%= link_to "Novo frete", new_trip_path, class: 'btn btn-default btn-gray' %>
+    <% end %>
+  </div>
+
+<body>
+  <table id="trips">
+    <thead>
+      <tr>
+        <th>Local de Partida</th>
+        <th>Local de Chegada</th>
+        <th>Data de Partida</th>
+        <th>Data de Chegada</th>
+        <th>Hora de Partida</th>
+        <th>Hora de Chegada</th>
+        <th>Tipo de Viagem</th>
+        <th>Participantes</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @trips.each do |trip| %>
+        <tr>
+          <td><%= trip.departure_location %></td>
+          <td><%= trip.arrival_location %></td>
+          <td><%= trip.departure_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.arrival_date.strftime('%d/%m/%Y') %></td>
+          <td><%= trip.departure_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.arrival_time.strftime('%H:%M:%S %Z') %></td>
+          <td><%= trip.trip_type %></td>
+          <td>
+          <% trip.participants.each do |participant| %>
+            <%= participant %><br>
+          <% end %>
+          </td>
+          <td>
+            <%= link_to "Detalhes", trip, class: "btn btn-primary", style: "margin-bottom: 5px;"%>
+            <% if current_user && !trip.user.eql?(current_user) %>
+              <% if trip.trip_type == 'Oferecida'%>
+                <%= link_to "Solicitar frete", join_trip_path(trip), method: :post, class: "btn btn-primary"%>
+              <% else %>
+                <%= link_to "Oferecer frete", join_trip_path(trip), method: :post, class: "btn btn-primary" %>
+              <% end %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</body> 
+</div>
+
+

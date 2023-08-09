@@ -10,7 +10,16 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="<%= content_for?(:body_class) ? yield(:body_class) : '' %>">
+    <%= render 'layouts/header' %>
+
+    <div class="container">
+      <!-- <p class="notice"><%= notice %></p> -->
+      <!-- <p class="alert"><%= alert %></p> -->
+      <%= yield %>
+
+      <%= render 'layouts/footer' %>
+    </div>
+
   </body>
 </html>

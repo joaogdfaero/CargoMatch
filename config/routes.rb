@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  devise_for :users, controllers: { registrations: 'users/registrations' }
+  resources :trips do
+    get 'join', on: :member
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+    member do
+      patch 'accept_request'
+      delete 'reject_request'
+      get 'manage_requests'
+    end
+  end
+
+  delete 'trips/:id', to: 'trips#destroy'
+  get 'my_trips', to: 'trips#my_trips'
+  
+  resources :users
+  root to: 'pages#home'
+  get 'sobre', to: 'static_pages#sobre'
+  get 'contato', to: 'static_pages#contato'
 end

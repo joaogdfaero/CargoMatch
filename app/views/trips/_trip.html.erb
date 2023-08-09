@@ -1,0 +1,80 @@
+<style>
+  #<%= dom_id(trip) %> {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  p {
+    margin: 5px 0;
+  }
+
+  strong {
+    font-weight: bold;
+  }
+</style>
+<% content_for :body_class, 'body' %>
+
+<div id="<%= dom_id(trip) %>">
+  <p>
+    <strong>Local de Partida:</strong>
+    <%= trip.departure_location %>
+  </p>
+
+  <p>
+    <strong>Local de Chegada:</strong>
+    <%= trip.arrival_location %>
+  </p>
+
+  <p>
+    <strong>Data de Partida:</strong>
+    <%= trip.departure_date %>
+  </p>
+
+  <p>
+    <strong>Data de Chegada:</strong>
+    <%= trip.arrival_date %>
+  </p>
+
+  <p>
+    <strong>Hora de Partida:</strong>
+    <%= trip.departure_time.strftime('%H:%M:%S %Z') %>
+  </p>
+
+  <p>
+    <strong>Hora de Chegada:</strong>
+    <%= trip.arrival_time.strftime('%H:%M:%S %Z') %>
+  </p>
+
+  <p>
+    <strong>Tipo de Viagem:</strong>
+    <%= trip.trip_type %>
+  </p>
+
+  <p>
+    <strong>Usuário:</strong>
+    <%= trip.user.name %>
+  </p>
+
+  <% if trip.requested_participants.any? %>
+    <p>
+      <strong>Solicitações:</strong>
+      <%= trip.requested_participants.join(', ') %> 
+    </p>
+  <% end %>
+
+  <% if trip.trip_type == 'Oferecida' %>
+    <p>
+      <strong>Participantes:</strong>
+      <%= trip.participants.join(', ') %>
+    </p>
+  <% else %>
+    <p>
+      <strong>Motoristas:</strong>
+      <%= trip.participants.join(', ') %>
+    </p>
+  <% end %>
+</div>
+
