@@ -1,24 +1,5 @@
-# README
+# CargoMatch (em construção 🚧)
+Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas podem oferecer aquele frete (semelhante ao que faz o Blablacar, para caronas).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viagem, e o contratante do frete consegue fretes mais baratos.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
