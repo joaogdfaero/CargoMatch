@@ -1,26 +1,8 @@
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/joaogdfaero/Netflix_API/">
-    <img src="Netflix-Symbol.png" alt="Logo" width="180" height="180">
-  </a>
-
-<h3 align="center">CargoMatch (em construção 🚧)</h3>
-
-  <p align="center">
-    Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas podem oferecer aquele frete.
+# CargoMatch (em construção 🚧)
+Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas podem oferecer aquele frete.
 
 Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viagem, e o contratante do frete consegue fretes mais baratos.
 
-    <br />
-    <br />
-    <br />
-    ·
-    <a href="https://github.com/joaogdfaero/Netflix_API/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/joaogdfaero/Netflix_API/issues">Request Feature</a>
-  </p>
-</div>
 
 ## Requisitos do Projeto :ballot_box_with_check:
 ● 
