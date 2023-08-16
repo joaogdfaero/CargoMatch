@@ -22,10 +22,10 @@ Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viage
 
 ## Instalação
 1. **Clone este repositório**  
-` git clone https://github.com/joaogdfaero/Netflix_API.git`
+` `
 
 2. **Acesse a pasta do projeto**  
-` cd Netflix_API `
+`  `
 
 3. **Instale as gems necessárias**  
 ` bundle `
