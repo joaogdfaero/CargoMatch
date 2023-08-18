@@ -22,21 +22,19 @@ Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viage
 
 ## Instalação
 1. **Clone este repositório**  
-` `
+` git clone https://github.com/joaogdfaero/CargoMatch.git`
 
 2. **Acesse a pasta do projeto**  
-`  `
+` cd CargoMatch `
 
 3. **Instale as gems necessárias**  
-` bundle `
+` bundle install`
 
 4. **Execute o servidor da aplicação**  
 ` rails s `
 
 5. **O servidor inciará na porta: 3000 - acesse:**    
 ` http://localhost:3000 `
-
-
 
 ##
 <br>Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
