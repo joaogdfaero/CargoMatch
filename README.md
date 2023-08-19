@@ -50,15 +50,15 @@
 https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
 
 ## Requisitos do Projeto :ballot_box_with_check:
-● Cadastro e login do usuário usando a gem devise;
+● Cadastro e login do usuário usando a `gem devise`;
 
-● Usuário consegue criar um frete que é associada automaticamente a ele
+● Usuário consegue criar um frete que é associada automaticamente a ele;
 
-● Usuário consegue solicitar fretes criados por outros usuários
+● Usuário consegue solicitar fretes criados por outros usuários;
 
-● Usuário dono do frete aceita ou recusa as solicitações de outros usuários
+● Usuário dono do frete aceita ou recusa as solicitações de outros usuários;
 
-● Usuário consegue ver as viagens criadas por ele em um menu "Minhas Viagens"
+● Usuário consegue ver as viagens criadas por ele em um menu "Minhas Viagens".
 
 ## Tecnologias:
 * Ruby 3.1.4
