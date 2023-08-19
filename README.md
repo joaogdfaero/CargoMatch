@@ -36,7 +36,7 @@
 <h3 align="center">Cargo Match</h3>
 
   <p align="center">
-    Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas podem oferecer aquele frete. 
+    Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas possam o oferecer. 
 
     <br />
     <br />
