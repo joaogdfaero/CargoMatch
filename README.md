@@ -52,10 +52,6 @@
 
 ● 
 
-## API Documentation (Postman) <a href="https://stackshare.io/postman" target="_blank"><img src="https://github.com/kilianpaquier/devicon/blob/dbea53e8f43aa502e0d35d595729ecd86db87f62/icons/postman/postman-plain.svg" alt="ruby" width="40" height="40" /></a> 
-
-[Link](https://documenter.getpostman.com/view/24543977/2s93zCXzWV) 
-
 ## Tecnologias:
 * Ruby 3.1.4
 * Rails 7.0.4
