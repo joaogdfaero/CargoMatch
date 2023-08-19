@@ -46,7 +46,7 @@
 </div>
 
 ## Requisitos do Projeto :ballot_box_with_check:
-● Cadastro e login do usuário usando a `gem devise`;
+● Cadastro e login do usuário;
 
 ● Usuário consegue criar um frete que é associada automaticamente a ele;
 
