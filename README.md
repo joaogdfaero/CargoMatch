@@ -45,10 +45,6 @@
   </p>
 </div>
 
-## Demonstração 📺:
-
-https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
-
 ## Requisitos do Projeto :ballot_box_with_check:
 ● Cadastro e login do usuário usando a `gem devise`;
 
@@ -59,6 +55,12 @@ https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-94
 ● Usuário dono do frete aceita ou recusa as solicitações de outros usuários;
 
 ● Usuário consegue ver as viagens criadas por ele em um menu "Minhas Viagens".
+
+
+## Demonstração 📺:
+
+https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
+
 
 ## Tecnologias:
 * Ruby 3.1.4
