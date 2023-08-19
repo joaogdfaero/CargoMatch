@@ -48,7 +48,7 @@
 ## Requisitos do Projeto :ballot_box_with_check:
 ● Cadastro e login do usuário;
 
-● Usuário consegue criar um frete que é associada automaticamente a ele;
+● Usuário consegue criar um frete que é associado automaticamente a ele;
 
 ● Usuário consegue solicitar fretes criados por outros usuários;
 
