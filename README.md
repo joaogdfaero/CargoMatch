@@ -37,8 +37,7 @@
 
   <p align="center">
     Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas possam o oferecer. 
-
-    <br />
+     <br />
     <br />
     <br />
     ·
@@ -60,8 +59,8 @@
 [Link](https://documenter.getpostman.com/view/24543977/2s93zCXzWV) 
 
 ## Tecnologias:
-* Ruby 3.0.2
-* Rails 7.0.4.3
+* Ruby 3.1.4
+* Rails 7.0.4
 * PostgreSQL
 
 ## Instalação
@@ -79,8 +78,6 @@
 
 5. **O servidor inciará na porta: 3000 - acesse:**    
 ` http://localhost:3000 `
-
-
 
 ##
 <br>Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
