@@ -1,13 +1,57 @@
-# CargoMatch (em construção 🚧)
-Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas podem oferecer aquele frete.
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viagem, e o contratante do frete consegue fretes mais baratos.
 
+
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/joaogdfaero/Netflix_API/">
+    <img src="Netflix-Symbol.png" alt="Logo" width="180" height="180">
+  </a>
+
+<h3 align="center">Cargo Match</h3>
+
+  <p align="center">
+    Site desenvolvido em Ruby On Rails em que motoristas possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas podem oferecer aquele frete. Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viagem, e o contratante do frete consegue fretes mais baratos.
+
+    <br />
+    <br />
+    <br />
+    ·
+    <a href="https://github.com/joaogdfaero/Netflix_API/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/joaogdfaero/Netflix_API/issues">Request Feature</a>
+  </p>
+</div>
 
 ## Requisitos do Projeto :ballot_box_with_check:
 ● 
 
-●
+● 
 
 ● 
 
@@ -18,7 +62,7 @@ Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viage
 ## Tecnologias:
 * Ruby 3.0.2
 * Rails 7.0.4.3
-* SQlite3
+* PostgreSQL
 
 ## Instalação
 1. **Clone este repositório**  
@@ -35,6 +79,8 @@ Assim o motorista aproveita um trajeto que já faria, reduz o custo da sua viage
 
 5. **O servidor inciará na porta: 3000 - acesse:**    
 ` http://localhost:3000 `
+
+
 
 ##
 <br>Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
