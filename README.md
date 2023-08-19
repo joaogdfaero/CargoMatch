@@ -28,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/CargoMatch/">
-    <img src="cargomatchlogo.png" alt="Logo" width="180" height="180">
+    <img src="cargomatchlogo1.png" alt="Logo" width="280" height="280">
   </a>
 
 <h3 align="center">Cargo Match</h3>
