@@ -8,8 +8,6 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
 <!-- PROJECT SHIELDS -->
 <!--
 *** I'm using markdown "reference style" links for readability.
@@ -30,7 +28,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/CargoMatch/">
-    <img src="Netflix-Symbol.png" alt="Logo" width="180" height="180">
+    <img src="cargomatchlogo.jpg" alt="Logo" width="180" height="180">
   </a>
 
 <h3 align="center">Cargo Match</h3>
