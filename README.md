@@ -46,11 +46,15 @@
 </div>
 
 ## Requisitos do Projeto :ballot_box_with_check:
-● 
+● Cadastro e login do usuário usando a gem devise;
 
-● 
+● Usuário consegue criar um frete que é associada automaticamente a ele
 
-● 
+● Usuário consegue solicitar fretes criados por outros usuários
+
+● Usuário dono do frete aceita ou recusa as solicitações de outros usuários
+
+● Usuário consegue ver as viagens criadas por ele em um menu "Minhas Viagens"
 
 ## Tecnologias:
 * Ruby 3.1.4
