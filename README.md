@@ -47,7 +47,7 @@
 
 ## Demonstração 📺:
 
-https://github.com/joaogdfaero/CargoMatch/assets/103076610/96907880-c90b-4bcb-893f-bc3217e98b0e
+https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
 
 ## Requisitos do Projeto :ballot_box_with_check:
 ● Cadastro e login do usuário usando a gem devise;
