@@ -34,7 +34,7 @@
 <h3 align="center">Cargo Match 0.1v</h3>
 
   <p align="center">
-    Site em que motoristas/caminhoneiros possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas possam o oferecer. Essa é a primeira versão do tipo. 
+    Site em que motoristas/caminhoneiros possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas possam o oferecer. 
      <br />
     <br />
     <br />
