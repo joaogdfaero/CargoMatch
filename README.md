@@ -57,7 +57,7 @@
 ● Usuário consegue ver as viagens criadas por ele em um menu "Minhas Viagens".
 
 
-## Demonstração 📺:
+## Demonstração 📺
 
 https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
 
