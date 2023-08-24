@@ -62,7 +62,7 @@
 https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
 
 
-## Tecnologias:
+## Tecnologias
 * Ruby 3.1.4
 * Rails 7.0.4
 * PostgreSQL
