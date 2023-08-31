@@ -1,4 +1,3 @@
-
 <a name="readme-top"></a>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -16,7 +15,7 @@
 <h3 align="center">Cargo Match 0.1v</h3>
 
   <p align="center">
-    Site em que motoristas/caminhoneiros possam se cadastrar e postar as suas rotas, para que então outros (pessoa ou empresa) possam contratar o serviço de transporte de frete. Também é possível que alguém solicite um frete e outros motoristas possam o oferecer. 
+    A website where drivers/truckers can register and post their routes, so that others (individuals or companies) can hire freight transport services. It is also possible for someone to request a freight and other drivers can offer it.
      <br />
     <br />
     <br />
@@ -27,48 +26,46 @@
   </p>
 </div>
 
-## Requisitos do Projeto :ballot_box_with_check:
-● Cadastro e login do usuário;
+## Project Requirements :ballot_box_with_check:
+● User registration and login;
 
-● Usuário consegue criar um frete que é associado automaticamente a ele;
+● User can create a freight that is automatically associated with them;
 
-● Usuário consegue solicitar fretes criados por outros usuários;
+● User can request freights created by other users;
 
-● Usuário dono do frete aceita ou recusa as solicitações de outros usuários;
+● Freight owner can accept or reject requests from other users;
 
-● Usuário consegue ver as viagens criadas por ele em um menu "Minhas Viagens".
+● User can view the trips created by them in a "My Trips" menu.
 
-
-## Demonstração 📺
+## Demo 📺
 
 https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
 
-
-## Tecnologias
+## Technologies
 * Ruby 3.1.4
 * Rails 7.0.4
 * PostgreSQL
 
-## Instalação
-1. **Clone este repositório**  
+## Installation
+1. **Clone this repository**  
 ` git clone https://github.com/joaogdfaero/CargoMatch.git`
 
-2. **Acesse a pasta do projeto**  
+2. **Navigate to the project folder**  
 ` cd CargoMatch `
 
-3. **Instale as gems necessárias**  
+3. **Install the necessary gems**  
 ` bundle install`
 
-4. **Execute o servidor da aplicação**  
+4. **Run the application server**  
 ` rails s `
 
-5. **O servidor inciará na porta: 3000 - acesse:**    
+5. **The server will start on port: 3000 - access:**    
 ` http://localhost:3000 `
 
 ##
 <br>Author: <strong>João Gabriel Dal Forno (joao.dal@acad.ufsm.br)</strong>
 
-<p align="right">(<a href="#readme-top">Voltar ao topo</a>)</p>
+<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -97,8 +94,7 @@ https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-94
 [Svelte-url]: https://svelte.dev/
 [Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
 [Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap.com]: https://img.shields.io/github/forks/joaogdfaero/CargoMatch.svg?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
-
+[JQuery-url]: https://jquery.com
