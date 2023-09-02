@@ -5,6 +5,7 @@ class User < ApplicationRecord
     has_many :trips
     validates :name, :cpf, presence: true
     validate :cpf_is_valid?
+    validates_inclusion_of :driver, in: [true, false]
 
     private
     def cpf_is_valid?
