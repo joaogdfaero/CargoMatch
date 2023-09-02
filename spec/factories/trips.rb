@@ -6,7 +6,7 @@ FactoryBot.define do
       arrival_date { Faker::Date.forward(days: 20) }
       departure_time { Faker::Time.between(from: DateTime.now, to: DateTime.now + 10.days) }
       arrival_time { Faker::Time.between(from: DateTime.now, to: DateTime.now + 20.days) }
-      trip_type { 'Solicitada' } # Or use 'Oferecida' as needed
+      trip_type { 'Solicitada' } 
       user
     end
   end

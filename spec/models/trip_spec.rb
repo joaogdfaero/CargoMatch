@@ -1,9 +1,7 @@
-# spec/models/trip_spec.rb
-
 require 'rails_helper'
 
 RSpec.describe Trip, type: :model do
-  let(:user) { create(:user) } # Assuming you have a User model and a FactoryBot factory for it
+  let(:user) { create(:user) } 
 
   it 'is valid with all required attributes' do
     trip = build(:trip, user: user)
