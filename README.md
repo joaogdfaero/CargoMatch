@@ -39,7 +39,7 @@
 
 ## Demo 📺
 
-https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-9456-4f53a3f20e70
+https://github.com/joaogdfaero/CargoMatch/assets/103076610/65229f42-5f9b-42d6-8954-146d269bd090
 
 ## Deploy link
 
