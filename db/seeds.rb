@@ -1,6 +1,6 @@
 trip_types = ['Solicitada', 'Oferecida']
 
-100.times do
+10.times do
   user = User.create!(
     name: Faker::Name.name,
     cpf: Faker::IDNumber.brazilian_citizen_number(formatted: true),
