@@ -29,13 +29,13 @@
 ## Project Requirements :ballot_box_with_check:
 ● User registration and login;
 
-● User can create a freight that is automatically associated with them;
+● User can create a freight that is automatically associated with him;
 
 ● User can request freights created by other users;
 
 ● Freight owner can accept or reject requests from other users;
 
-● User can view the trips created by them in a "My Trips" menu.
+● User can view the trips created by him in a "My Trips" menu.
 
 ## Demo 📺
 
