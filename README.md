@@ -43,7 +43,7 @@ https://github.com/joaogdfaero/CargoMatch/assets/103076610/a9d0ead6-2aac-4a13-94
 
 ## Deploy link
 
-Acess the app at: https://cargomatch10.fly.dev/
+Acess at: https://cargomatch10.fly.dev/
 
 ## Technologies
 * Ruby 3.1.4
