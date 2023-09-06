@@ -4,7 +4,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-
 <br />
 <div align="center">
   <a href="https://github.com/joaogdfaero/CargoMatch/">
