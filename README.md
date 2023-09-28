@@ -58,10 +58,13 @@ Acess at: **https://cargomatch10.fly.dev/**
 3. **Install the necessary gems**  
 ` bundle install`
 
-4. **Run the application server**  
+4. **Populate the database**  
+` rails db:seed`
+
+5. **Run the application server**  
 ` rails s `
 
-5. **The server will start on port: 3000 - access:**    
+6. **The server will start on port: 3000 - access:**    
 ` http://localhost:3000 `
 
 ##
