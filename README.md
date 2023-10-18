@@ -33,7 +33,7 @@
 
 ● Freight owner can accept or reject requests from other users;
 
-● User can view the trips created by him in a "My Trips" menu.
+● User can view the trips created by himself in a "My Trips" menu.
 
 ## Demo 📺
 
