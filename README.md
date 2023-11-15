@@ -97,5 +97,4 @@ Acess at: **https://cargomatch10.fly.dev/**
 [Angular-url]: https://angular.io/
 [Svelte-url]: https://svelte.dev/
 [Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/github/forks/joaogdfaero/CargoMatch.svg?style=for-the-badge&logo=bootstrap&logoColor=white
 
