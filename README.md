@@ -95,6 +95,3 @@ Acess at: **https://cargomatch10.fly.dev/**
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
-[Svelte-url]: https://svelte.dev/
-[Laravel-url]: https://laravel.com
-
