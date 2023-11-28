@@ -79,7 +79,6 @@ Acess at: **https://cargomatch10.fly.dev/**
 [forks-shield]: https://img.shields.io/github/forks/joaogdfaero/CargoMatch.svg?style=for-the-badge
 [forks-url]: https://github.com/joaogdfaero/CargoMatch/network/members
 [stars-shield]: https://img.shields.io/github/stars/joaogdfaero/CargoMatch.svg?style=for-the-badge
-[stars-url]: https://github.com/joaogdfaero/CargoMatch/stargazers
 [issues-shield]: https://img.shields.io/github/issues/joaogdfaero/CargoMatch.svg?style=for-the-badge
 [issues-url]: https://github.com/joaogdfaero/CargoMatch/issues
 [license-shield]: https://img.shields.io/github/license/joaogdfaero/CargoMatch.svg?style=for-the-badge
