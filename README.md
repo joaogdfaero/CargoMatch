@@ -11,7 +11,6 @@
   </a>
 
 <h3 align="center">Cargo Match 1.0v</h3>
-
   <p align="center">
     A website built with Ruby on Rails where drivers/truckers can register and post their routes, so that others (individuals or companies) can hire freight transport services. It is also possible for someone to request a freight and other drivers can offer it.
      <br />
